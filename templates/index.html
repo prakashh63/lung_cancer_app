@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+
+
+    
+</head>
+<body>
+
+<div class="container">
+    <h2>Lung Cancer Prediction</h2>
+    
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if filename %}
+        <h3>Uploaded Image</h3>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+
+        <h3>Prediction</h3>
+        <p><strong>Class:</strong> {{ prediction }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+
+        <h3>Prediction Confidence Chart</h3>
+        <img src="{{ chart_path }}" alt="Prediction Chart">
+    {% endif %}
+</div>
+
+</body>
+</html>
+
+

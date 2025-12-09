@@ -1,0 +1,49 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+   background: linear-gradient(rgba(0,0,0,0.5)),blue;
+    background-image: url("/static/images/lung_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* filter: blur(1px); */
+    /* background-attachment: fixed; */
+    
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    /* background: linear-gradient(blue, gray,rgb(179, 226, 179), rgb(236, 101, 101)); */
+    background-image: url("/static/images/lung_background.jpg");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+     backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgb(6, 22, 252);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+ 
+}
+
+.error {
+    color: red;
+
+}
